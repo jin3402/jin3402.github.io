@@ -9,6 +9,7 @@ description: >-
   학부 졸업을 앞두고 백엔드 프로그래밍, RAG, 서비스개발 과정을 기록하는 공간입니다.
 
 url: "https://jin3402.github.io"
+baseurl: ""
 
 github:
   username: jin3402
