@@ -1,7 +1,7 @@
 ---
 title: "Safety-Map: 안전한 길찾기 및 안심 귀가 서비스 개발"
 author: 이진형
-date: 2025-12-01 10:00:00 +0900
+date: 2026-05-09 10:00:00 +0900
 categories: [Project, Mobile]
 tags: [Flutter, GoogleMaps, Security, DefensiveProgramming]
 ---
@@ -24,32 +24,3 @@ tags: [Flutter, GoogleMaps, Security, DefensiveProgramming]
 
 ### ⚙️ 사용자 맞춤 설정 (Custom Settings)
 - `shared_preferences`를 활용해 개인별 비상 연락망과 앱 알림 설정을 기기 로컬에 안전하게 저장합니다.
-
----
-
-## 🏗 Architecture & Highlights (개발 주안점)
-
-### 1. 방어적 프로그래밍 (Defensive Programming)
-보안을 위해 **`.env` 파일(API Key 보관)**을 Git 관리 대상에서 제외했습니다. 또한, 타 개발 환경에서 `.env` 파일 누락으로 인해 앱이 강제 종료되는 것을 방지하기 위해 `main.dart` 초기화 단계에 `try-catch` 예외 처리를 구현하여 앱의 안정성을 높였습니다.
-
-### 2. 유지보수를 고려한 라우팅 설계
-화면 전환 로직을 하드코딩하지 않고, **Named Route** 방식을 채택하여 라우팅 로직을 중앙 집중화했습니다. (`/splash`, `/login`, `/home` 등) 이를 통해 대규모 프로젝트에서도 경로 관리가 용이하도록 설계했습니다.
-
-### 3. Material 3 기반의 일관된 UI/UX
-최신 Flutter 디자인 시스템인 `useMaterial3`를 적용했습니다. 사용자에게 신뢰감을 주는 **푸른색 계열(#2567E8)**을 `seedColor`로 지정하여 앱 전반에 통일감 있는 브랜드 아이덴티티를 부여했습니다.
-
----
-
-## 🛠 Tech Stack
-- **Framework:** Flutter (Dart >= 3.4.3)
-- **Map & Location:** Google Maps API, geolocator
-- **Network & Storage:** REST API (http), shared_preferences
-- **System & Security:** flutter_dotenv, permission_handler
-
----
-
-## 🚀 Getting Started (실행 방법)
-
-1. **패키지 다운로드**
-   ```bash
-   $ flutter pub get
