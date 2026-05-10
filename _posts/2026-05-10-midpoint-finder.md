@@ -43,4 +43,4 @@ tags: [react, toss, webview, cursor, mcp]
 
 <br>
 
-- **Repository:** [GitHub 링크 추가](https://github.com/jin3402/midpoint-finder)
+- **Repository:** [midpoint-finder GITHUB](https://github.com/jin3402/midpoint-finder)
