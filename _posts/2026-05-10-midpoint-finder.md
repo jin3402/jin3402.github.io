@@ -1,6 +1,6 @@
 ---
 title: "[React] 웹뷰 기반 토스 미니앱 '중간지점 찾기' 개발 회고"
-date: 2026-05-10 18:00:00 +0900
+date: 2026-05-10 12:00:00 +0900
 categories: [Project, Frontend]
 tags: [react, toss, webview, cursor, mcp]
 ---
