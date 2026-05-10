@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Safety-Map: 안전한 길찾기 및 안심 귀가 서비스 개발"
 author: 이진형
 date: 2026-05-07 13:00:00 +0900
