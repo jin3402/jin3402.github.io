@@ -8,7 +8,7 @@ tags: [Flutter, GoogleMaps, Security, DefensiveProgramming]
 ---
 
 > **"사용자의 안전한 이동을 보장하고, 위급 상황 시 즉각적인 대응을 돕는 크로스 플랫폼 애플리케이션"**
-
+-팀프로젝트-
 'Safety-Map'은 구글 맵 기반의 실시간 위치 추적과 긴급 구조 요청 기능을 통합하여, 사용자의 안전을 지켜주는 서비스입니다.
 
 ---
