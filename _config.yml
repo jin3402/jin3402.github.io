@@ -7,10 +7,10 @@ timezone: Asia/Seoul
 
 # SEO 및 메인 타이틀 설정
 title: "Jin-Hyeong's Dev Log"
-tagline: "백엔드 및 Flutter 개발 기록"
+tagline: "토스 미니앱 · Flutter · AI 학습 서비스 개발 기록"
 description: >-
-  4학년 컴퓨터공학 전공생 이진형의 개발 블로그입니다. 
-  졸업 프로젝트 및 그동안의 협업 성과를 기록합니다.
+  컴퓨터공학 전공 이진형의 기술 블로그입니다.
+  토스 미니앱, Flutter, AI 학습 서비스 등 기획부터 배포까지 진행한 프로젝트를 기록합니다.
 
 # 주소 설정 (중요: 끝에 /를 붙이지 마세요)
 url: "https://jin3402.github.io"
