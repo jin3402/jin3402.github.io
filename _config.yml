@@ -32,6 +32,30 @@ social:
 
 avatar:  'assets/img/jin.png'
 paginate: 10
+toc: true
+
+# Chirpy가 About 등 탭 페이지를 만들려면 tabs 컬렉션이 필요해요.
+collections:
+  tabs:
+    output: true
+    sort_by: order
+
+# 글 주소는 파일명 기준(/posts/gamsale/)으로 고정해요.
+# 제목 기반 permalink는 한글 제목에서 주소가 비어 404가 납니다.
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      toc: true
+      permalink: /posts/:slug/
+  - scope:
+      path: ""
+      type: tabs
+    values:
+      layout: page
+      permalink: /:title/
 
 # Chirpy 테마 기본 설정 (건드리지 마세요)
 jekyll-archives:

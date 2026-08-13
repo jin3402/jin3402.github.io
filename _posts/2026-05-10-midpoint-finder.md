@@ -2,6 +2,8 @@
 layout: post
 title: "중간지점찾기: 토스 미니앱에서 모임 장소를 계산하기까지"
 date: 2026-08-13 11:00:00 +0900
+permalink: /posts/midpoint-finder/
+slug: midpoint-finder
 categories: [Project, Frontend]
 tags: [react, typescript, toss, webview, kakao-maps, ads]
 pin: true
