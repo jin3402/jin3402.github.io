@@ -7,6 +7,8 @@ slug: midpoint-finder
 categories: [Project, Frontend]
 tags: [react, typescript, toss, webview, kakao-maps, ads]
 pin: true
+locale: ko
+pair: /en/posts/midpoint-finder/
 description: 여러 출발지의 중간 위치를 찾고 주변 맛집·카페·볼거리를 추천하는 앱인토스 미니앱. 실제 화면을 따라가며 입력, 지도 결과, 공유/지도 이동 UX를 정리합니다.
 ---
 

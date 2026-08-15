@@ -1,6 +1,8 @@
 ---
 icon: fas fa-info-circle
 order: 4
+locale: ko
+pair: /en/about/
 ---
 
 컴퓨터공학을 전공하며 **Flutter 앱**, **토스 미니앱**, **AI 학습 서비스**를 직접 기획하고 배포까지 해본 개발자입니다.  

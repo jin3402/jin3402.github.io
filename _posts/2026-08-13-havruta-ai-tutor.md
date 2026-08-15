@@ -7,6 +7,8 @@ slug: havruta-ai-tutor
 categories: [Project, Backend]
 tags: [python, fastapi, react, rag, openai, railway]
 pin: true
+locale: ko
+pair: /en/posts/havruta-ai-tutor/
 description: 고등학생이 AI와 질문·설명·피드백을 반복하는 하브루타 튜터 MVP. 분리된 브랜치를 통합하고 RAG·인증·실시간 채팅까지 배포한 기록입니다.
 ---
 

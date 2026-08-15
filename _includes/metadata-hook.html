@@ -1,0 +1,7 @@
+{% if page.pair %}
+<link rel="alternate" href="{{ page.pair | absolute_url }}" hreflang="{% if page.locale == 'en' %}ko{% else %}en{% endif %}" />
+{% endif %}
+<link rel="alternate" href="{{ '/' | absolute_url }}" hreflang="ko" />
+<link rel="alternate" href="{{ '/en/' | absolute_url }}" hreflang="en" />
+<link rel="stylesheet" href="{{ '/assets/css/lang-switch.css' | relative_url }}" />
+<script src="{{ '/assets/js/lang-switch.js' | relative_url }}" defer></script>

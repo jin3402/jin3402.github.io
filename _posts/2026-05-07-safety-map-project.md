@@ -5,6 +5,8 @@ author: 이진형
 date: 2026-05-07 13:00:00 +0900
 permalink: /posts/safety-map-project/
 slug: safety-map-project
+locale: ko
+pair: /en/posts/safety-map-project/
 categories: [Project, Mobile]
 tags: [Flutter, GoogleMaps, Security, DefensiveProgramming]
 ---

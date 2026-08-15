@@ -1,16 +1,16 @@
 # The Site Configuration
 theme: jekyll-theme-chirpy
 
-# 언어 및 시간대 설정
+# 기본 UI 언어. 영문 글은 /en/ 아래이며 상단 한/EN 스위치로 전환합니다.
 lang: ko
 timezone: Asia/Seoul
 
 # SEO 및 메인 타이틀 설정
 title: "Jin-Hyeong's Dev Log"
-tagline: "토스 미니앱 · Flutter · AI 학습 서비스 개발 기록"
+tagline: "Toss mini-apps · Flutter · AI learning notes"
 description: >-
-  컴퓨터공학 전공 이진형의 기술 블로그입니다.
-  토스 미니앱, Flutter, AI 학습 서비스 등 기획부터 배포까지 진행한 프로젝트를 기록합니다.
+  Project notes by Jin-Hyeong Lee: Toss mini-apps, Flutter, and an AI tutor.
+  Switch language with 한 / EN in the top bar.
 
 # 주소 설정 (중요: 끝에 /를 붙이지 마세요)
 url: "https://jin3402.github.io"
