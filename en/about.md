@@ -13,12 +13,6 @@ Computer engineering student who has planned, built, and shipped Flutter apps, T
 
 ## Selected work
 
-### ScreenSwap
-A macOS menu bar app for moving and arranging windows between a MacBook display and an external monitor, from the keyboard. Overlapping windows physically fan apart via the Accessibility API, and several can be selected and sent, split, or undone at once.
-
-- [GitHub](https://github.com/jin3402/ScreenSwap)
-- [Write-up](/en/posts/screenswap/)
-
 ### GemSale
 A Toss mini-app that puts Steam, Epic, and console game deals in one feed. Build-time snapshots absorb WebView CORS limits; ads, promotions, and content filters are wired for a real review.
 

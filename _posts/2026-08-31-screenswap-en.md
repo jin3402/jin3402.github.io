@@ -10,6 +10,7 @@ hidden: true
 locale: en
 pair: /posts/screenswap/
 description: A macOS menu bar app that moves and arranges windows between a MacBook display and an external monitor from the keyboard. Overlapping windows physically fan apart, several can be picked and acted on at once, and every move can be undone.
+published: false
 ---
 
 > What Mission Control does — redrawing every window's live texture at a new position — is private API, off-limits to third-party apps. ScreenSwap takes the honest route instead: it moves the real windows through the Accessibility API, so what's on screen is always a live window, never a screenshot.
