@@ -9,7 +9,7 @@ tags: [react, typescript, toss, webview, ads, promotion, cors]
 hidden: true
 locale: en
 pair: /posts/gamsale/
-description: A Toss mini-app that shows Steam, Epic, and console game deals in one feed. CORS snapshots, filters, and the store-exit UX.
+description: A Toss WebView mini-app that shows Steam, Epic, and console game deals in one feed. CORS snapshots, filters, and the store-exit UX.
 ---
 
 > CORS, snapshots, ads, promotions, and content filters — a deal-curation product finished under real mini-app constraints.
@@ -17,6 +17,7 @@ description: A Toss mini-app that shows Steam, Epic, and console game deals in o
 - **GitHub:** [jin3402/gamsale](https://github.com/jin3402/gamsale)
 - **Platform:** Apps in Toss WebView · TDS
 - **Role:** Solo — product, engineering, and launch
+- **Users:** 300+ to date
 
 Game discounts live on Steam, Epic, Xbox, PlayStation, and Nintendo. Putting them in one place is useful, but console store APIs often fail CORS inside the Toss WebView. TDS, ads, promotion review, and adult-content rules all have to be met. A plain `fetch` is not enough to ship.
 

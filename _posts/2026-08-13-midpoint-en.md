@@ -9,7 +9,7 @@ tags: [react, typescript, toss, webview, kakao-maps, ads]
 hidden: true
 locale: en
 pair: /posts/midpoint-finder/
-description: A Toss mini-app that finds a midpoint from several origins and recommends nearby restaurants, cafes, and sights.
+description: A Toss WebView mini-app that finds a midpoint from several origins and recommends nearby restaurants, cafes, and sights.
 ---
 
 A Toss mini-app for the “where should we meet?” problem. Enter several origins, get a midpoint, then nearby restaurants, cafes, and sights.
