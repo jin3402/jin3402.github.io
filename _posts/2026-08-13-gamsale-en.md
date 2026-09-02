@@ -51,19 +51,6 @@ _Next action for a deal from the feed. The interstitial runs only before the sto
 
 ## Where data and ads attach
 
-```text
-[Toss mini-app WebView]
-        │
-        ├─ Steam / Epic  ──► CheapShark (CORS allowed, live)
-        │
-        ├─ Xbox / PS / Nintendo
-        │     ├─ Dev: Vite proxy, live
-        │     └─ Prod: prebuild snapshot bundle
-        │
-        ├─ Ads ──► banner + interstitial before store
-        └─ Promo ──► grantPromotionReward (once per device)
-```
-
 Nintendo titles are filtered for adult, sexual, and low-quality keywords at snapshot time and again at runtime. A name mismatch once failed review, so the console name and `brand.displayName` are both `겜세일`.
 
 ## Decisions

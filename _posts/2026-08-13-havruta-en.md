@@ -43,18 +43,6 @@ Each piece ran, but not as one service. I merged backend, AITraining, and fronte
 
 ## Architecture
 
-```text
-Browser (React / Vite)
-   ├── REST + JWT ──► FastAPI
-   └── WebSocket + JWT ──► Room Chat
-
-FastAPI ── Auth / Rooms / Tutor / Notes / Quizzes / Dashboard
-   ├── MySQL
-   ├── Redis Pub/Sub
-   ├── Chroma / lexical fallback
-   └── OpenAI (rule-based reply if the call fails)
-```
-
 When `AI_PROVIDER=openai`, Chroma hits for the selected subject are sent to OpenAI. If the key is missing or the call fails, a rule-based reply is used. If RAG is down, MySQL lexical search is the fallback.
 
 ## What shipped

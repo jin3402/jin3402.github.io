@@ -43,18 +43,6 @@ description: 고등학생이 AI와 질문·설명·피드백을 반복하는 하
 
 ## 아키텍처
 
-```text
-Browser (React / Vite)
-   ├── REST + JWT ──► FastAPI
-   └── WebSocket + JWT ──► Room Chat
-
-FastAPI ── Auth / Rooms / Tutor / Notes / Quizzes / Dashboard
-   ├── MySQL
-   ├── Redis Pub/Sub
-   ├── Chroma / Lexical fallback
-   └── OpenAI (실패 시 규칙 기반 답변)
-```
-
 `AI_PROVIDER=openai`이면 선택한 과목의 ChromaDB 검색 근거를 OpenAI에 전달합니다. API 키가 없거나 호출이 실패하면 규칙 기반 답변으로 대체합니다. RAG가 없으면 MySQL 어휘 검색으로 폴백합니다.
 
 ## 구현 범위
