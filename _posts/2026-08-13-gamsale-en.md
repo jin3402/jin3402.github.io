@@ -49,6 +49,19 @@ The heart is not on the sheet. Wishlist writes to device-local storage and never
 _Next action for a deal from the feed. The interstitial runs only before the store; share opens immediately._
 {: .fig-caption }
 
+## 3. Steam deals are live, and prices convert to KRW
+
+The same screen narrowed to the `Steam` chip. Xbox, PlayStation, and Nintendo come from build-time snapshots, so those lists are frozen at deploy. Steam and Epic call CheapShark live, so the feed differs every time the app opens.
+
+CheapShark returns prices in USD. The won figures on screen are that USD price multiplied by a USD→KRW rate from `open.er-api.com`, cached for an hour. If the rate call fails, `FALLBACK_USD_KRW_RATE` (1,350 by default) takes over, so a price never renders empty. That is how `Serious Sam Classic: The Second Encounter` lands at 1,223원 from 8,229원, a 85% cut.
+
+Deduplication keys on the title string, so separately named products like `The First Encounter` and `The Second Encounter` both survive. That is why one series can show up twice in a row.
+
+![GemSale Steam tab with Gorogoa and Serious Sam deals, and the action sheet for Serious Sam Classic: The First Encounter](/assets/img/posts/gamsale-steam-actionsheet.png)
+{: .w-50 .shadow .rounded-10 }
+_The feed narrowed to Steam, with the action sheet open. The won prices are CheapShark USD values converted at the fetched rate._
+{: .fig-caption }
+
 ## Where data and ads attach
 
 Nintendo titles are filtered for adult, sexual, and low-quality keywords at snapshot time and again at runtime. A name mismatch once failed review, so the console name and `brand.displayName` are both `겜세일`.
