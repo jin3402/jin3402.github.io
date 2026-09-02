@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Midpoint Finder: picking a fair meetup inside a Toss mini-app"
-date: 2026-08-13 10:20:00 +0900
+date: 2026-08-18 09:00:00 +0900
 permalink: /en/posts/midpoint-finder/
 slug: midpoint-finder
 categories: [Project, Frontend]

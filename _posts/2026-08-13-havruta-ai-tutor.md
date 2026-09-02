@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Havruta AI Tutor: 질문과 설명으로 공부하는 AI 학습 서비스"
-date: 2026-08-13 10:00:00 +0900
+date: 2026-08-20 09:00:00 +0900
 permalink: /posts/havruta-ai-tutor/
 slug: havruta-ai-tutor
 categories: [Project, Backend]

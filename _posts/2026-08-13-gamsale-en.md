@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "GemSale: curating console and PC deals inside a Toss mini-app"
-date: 2026-08-13 09:00:00 +0900
+date: 2026-08-19 09:00:00 +0900
 permalink: /en/posts/gamsale/
 slug: gamsale
 categories: [Project, Frontend]

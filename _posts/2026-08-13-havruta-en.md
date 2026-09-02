@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Havruta AI Tutor: learning by explaining, not by collecting answers"
-date: 2026-08-13 10:00:00 +0900
+date: 2026-08-20 09:00:00 +0900
 permalink: /en/posts/havruta-ai-tutor/
 slug: havruta-ai-tutor
 categories: [Project, Backend]

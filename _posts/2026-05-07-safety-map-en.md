@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Safety-Map: safer routes and a one-tap SOS"
-date: 2026-05-07 13:00:00 +0900
+date: 2026-08-16 09:00:00 +0900
 permalink: /en/posts/safety-map-project/
 slug: safety-map-project
 categories: [Project, Mobile]
