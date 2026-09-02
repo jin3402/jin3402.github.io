@@ -29,6 +29,24 @@ This is not a service that only hands answers to high-school students. It is a H
 6. On finish, a study record and summary note are generated.
 7. The same material is used to build a review quiz.
 
+## The loop, on screen
+
+Steps 1 and 6 are the ones you can actually see. One screen narrows what will be studied before anything starts; the other shows what the session left behind.
+
+`학습하기` does not open a chat right away. It asks for room, subject, school level, grade, and unit first. The `자료 4,797개` next to the unit is the number of study documents tied to it. That choice becomes the retrieval scope, so the AI grounds its questions in the selected unit instead of answering from anywhere. The example here is grade-7 ethics, while the `AITraining` branch originally held nothing but grade-10 math JSON. Widening that into a pickable level and subject was part of the merge.
+
+![Havruta study setup screen with room, subject, school level, grade, and unit selects](/assets/img/posts/havruta-study-setup.png)
+{: .shadow .rounded-10 }
+_Scope is chosen before the conversation. Picking a unit limits what can be used as grounding._
+{: .fig-caption }
+
+Home is the other end of the loop. What steps 6 and 7 generate becomes the dashboard. `완료한 학습` counts finished sessions, `대화 메시지` counts messages exchanged, and `학습 기록` counts the records written on finish. `응답 평가` is a running average, so it stays `-` until scores accumulate. The `직선의 방정식` entry under recent records is a session run on that grade-10 math material.
+
+![Havruta home dashboard with four cumulative stat cards, shortcut buttons, and recent study records](/assets/img/posts/havruta-home.png)
+{: .shadow .rounded-10 }
+_A finished session leaves a record, a summary note, and a quiz. Home only shows the totals._
+{: .fig-caption }
+
 ## Why the repo had to be merged
 
 The original repository was split by role.
