@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "GemSale: curating console and PC deals inside a Toss mini-app"
+title: "겜세일: curating console and PC deals inside a Toss mini-app"
 date: 2026-08-19 09:00:00 +0900
 permalink: /en/posts/gamsale/
 slug: gamsale
@@ -31,7 +31,7 @@ Steam and Epic call CheapShark live. Xbox, PlayStation, and Nintendo use a build
 
 A static top-of-feed is boring, so the highest-discount pool is **shuffled with a session seed**. The first paint loads about 150 deals. Steam/Epic pages are fetched only after the user reaches the end.
 
-![GemSale feed with All tab and discounted cards](/assets/img/posts/gamsale-list.png)
+![겜세일 feed with All tab and discounted cards](/assets/img/posts/gamsale-list.png)
 {: .w-50 .shadow .rounded-10 }
 _Platform chips, discount badge, and prices sit on one card. The heart is separate from the card tap so users can save a deal without opening the store._
 {: .fig-caption }
@@ -58,7 +58,7 @@ CheapShark returns prices in USD. The won figures on screen are that USD price m
 
 Deduplication keys on the title string, so separately named products like `The First Encounter` and `The Second Encounter` both survive. That is why one series can show up twice in a row.
 
-![GemSale Steam tab with Gorogoa and Serious Sam deals, and the action sheet for Serious Sam Classic: The First Encounter](/assets/img/posts/gamsale-steam-actionsheet.png)
+![겜세일 Steam tab with Gorogoa and Serious Sam deals, and the action sheet for Serious Sam Classic: The First Encounter](/assets/img/posts/gamsale-steam-actionsheet.png)
 {: .w-50 .shadow .rounded-10 }
 _The feed narrowed to Steam, with the action sheet open. The won prices are CheapShark USD values converted at the fetched rate._
 {: .fig-caption }

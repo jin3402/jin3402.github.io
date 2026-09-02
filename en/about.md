@@ -13,7 +13,7 @@ Computer engineering student who has planned, built, and shipped Flutter apps, T
 
 ## Selected work
 
-### GemSale
+### 겜세일
 A Toss mini-app that puts Steam, Epic, and console game deals in one feed. Build-time snapshots absorb WebView CORS limits; ads, promotions, and content filters are wired for a real review.
 
 - [GitHub](https://github.com/jin3402/gamsale)
