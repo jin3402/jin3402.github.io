@@ -44,11 +44,6 @@ Tapping the card body opens a bottom sheet. The user sees discount, title, and p
 
 The heart is not on the sheet. Wishlist writes to device-local storage and never triggers a store jump or an ad.
 
-![Dead Space action sheet](/assets/img/posts/gamsale-actionsheet.png)
-{: .w-50 .shadow .rounded-10 }
-_Next action for a deal from the feed. The interstitial runs only before the store; share opens immediately._
-{: .fig-caption }
-
 ## Where data and ads attach
 
 ```text
