@@ -14,8 +14,9 @@ Computer engineering student who has planned, built, and shipped Flutter apps, T
 ## Selected work
 
 ### 겜세일
-A Toss mini-app that puts Steam, Epic, and console game deals in one feed. Build-time snapshots absorb WebView CORS limits; ads, promotions, and content filters are wired for a real review.
+A Toss mini-app — and now a deal-search website — that puts Steam, Epic, and console game deals in one feed. Build-time snapshots absorb WebView CORS limits; ads, promotions, and content filters are wired for a real review. Because TDS blocks non-Toss domains, the website shares only the data layer and has its own UI with search and all-time-low comparison.
 
+- [Website](https://gamsale.vercel.app)
 - [GitHub](https://github.com/jin3402/gamsale)
 - [Write-up](/en/posts/gamsale/)
 
@@ -43,4 +44,4 @@ A Havruta-style learning web app where high-school students explain ideas to an 
 - **Frontend:** TypeScript, React, Flutter, Vite, TDS
 - **Backend / AI:** Python, FastAPI, MySQL, Redis, RAG, OpenAI
 - **macOS Native:** Swift, AppKit, Accessibility API
-- **Platform:** Apps in Toss (WebView), GitHub Pages, Railway
+- **Platform:** Apps in Toss (WebView), Vercel, GitHub Pages, Railway

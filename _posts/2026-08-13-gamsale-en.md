@@ -1,21 +1,23 @@
 ---
 layout: post
-title: "겜세일: curating console and PC deals inside a Toss mini-app"
+title: "겜세일: curating console and PC deals inside a Toss mini-app — and on the web"
 date: 2026-08-19 09:00:00 +0900
+last_modified_at: 2026-10-26 09:00:00 +0900
 permalink: /en/posts/gamsale/
 slug: gamsale
 categories: [Project, Frontend]
-tags: [react, typescript, toss, webview, ads, promotion, cors]
+tags: [react, typescript, toss, webview, ads, promotion, cors, vercel]
 hidden: true
 locale: en
 pair: /posts/gamsale/
-description: A Toss WebView mini-app that shows Steam, Epic, and console game deals in one feed. CORS snapshots, filters, and the store-exit UX.
+description: A Toss WebView mini-app that shows Steam, Epic, and console game deals in one feed, later extended to a deal-search website. CORS snapshots, filters, the store-exit UX, and splitting the UI when TDS blocks other domains.
 ---
 
 > CORS, snapshots, ads, promotions, and content filters — a deal-curation product finished under real mini-app constraints.
 
+- **Website:** [gamsale.vercel.app](https://gamsale.vercel.app) (live since Oct 2026)
 - **GitHub:** [jin3402/gamsale](https://github.com/jin3402/gamsale)
-- **Platform:** Apps in Toss WebView · TDS
+- **Platform:** Apps in Toss WebView · TDS / Website: Vercel
 - **Role:** Solo — product, engineering, and launch
 - **Users:** 300+ to date
 
@@ -63,6 +65,38 @@ Deduplication keys on the title string, so separately named products like `The F
 _The feed narrowed to Steam, with the action sheet open. The won prices are CheapShark USD values converted at the fetched rate._
 {: .fig-caption }
 
+## 4. Beyond Toss: a deal-search website (Oct 2026)
+
+The mini-app only opens inside the Toss app. To reach people outside Toss, I deployed the same build to Vercel — and got a **blank page**. Two causes:
+
+- TDS (`@toss/tds-mobile`) **deliberately refuses to run** on domains other than Toss and localhost. It is a license restriction, so I did not work around it.
+- The Toss SDK's ad-support check throws outside the WebView.
+
+So I **shared the data layer and split the UI.** `src/features/game-deals/api` (fetching, FX, snapshots, cache) is imported as-is by both apps; the website has its own entry (`web/index.html` → `src/web`) and build config (`vite.web.config.ts`) with its own components. The web bundle contains no TDS or Toss SDK, so JS dropped from **1.4 MB to 312 KB**.
+
+![GamSale website home with five platform chips and a grid of deal cards](/assets/img/posts/gamsale-web-home.jpg)
+{: .shadow .rounded-10 }
+_The web home: about 590 deals across five platforms, with a count on each chip. Popular-deal suggestions are picked from live data by Steam review count._
+{: .fig-caption }
+
+The website adds what the mini-app did not have:
+
+- **Search:** combines the already-loaded list (consoles included) with CheapShark title search. CheapShark matching is loose (`hades` returned `Shades of Horror`), so results are re-filtered to match at word starts.
+- **Filters and sort:** multi-platform, minimum discount, maximum price (including free only), and sort by recommendation, discount, price, Steam rating, or release date. Everything lives in the URL, so a search can be shared as a link.
+- **All-time low:** dropped from the mini-app because of 429s. On the web it is never fetched for the list — only **once, when a detail opens** — showing the historical low, its date, whether today is the low, and cheaper stores.
+
+![Deal detail with all-time low, Steam rating, Metacritic, and release date](/assets/img/posts/gamsale-web-detail.jpg)
+{: .shadow .rounded-10 }
+_The all-time low is fetched only when a detail opens. Converted dollar prices carry ≈ and a “US store” note so they are not mistaken for Korean prices._
+{: .fig-caption }
+
+![Mobile search](/assets/img/posts/gamsale-web-mobile.jpg)
+{: .w-50 .shadow .rounded-10 }
+_On mobile the grid becomes two columns and the chips scroll sideways._
+{: .fig-caption }
+
+The website is more exposed, so it has its own adult-content filter. Single words (Wife, Maid) would drop ordinary games, so it uses genre patterns and unambiguous terms; titles that were unclear were checked against their thumbnails, and 21 were removed.
+
 ## Where data and ads attach
 
 Nintendo titles are filtered for adult, sexual, and low-quality keywords at snapshot time and again at runtime. A name mismatch once failed review, so the console name and `brand.displayName` are both `겜세일`.
@@ -77,6 +111,8 @@ Nintendo titles are filtered for adult, sexual, and low-quality keywords at snap
 | Wanted an infinite list | Paginate Steam/Epic only after the first 150 |
 | Adult Nintendo titles | Dual filter at snapshot and runtime |
 | Mini-app name rejected | Match console name and `brand.displayName` |
+| TDS blocks non-Toss domains | Share the data layer; separate web entry, build, and UI |
+| Cost of all-time-low calls | Off the list; fetched once when a web detail opens |
 
 ## Stack
 
@@ -84,8 +120,8 @@ Nintendo titles are filtered for adult, sexual, and low-quality keywords at snap
 - Platform: `@apps-in-toss/web-framework`
 - Design system: `@toss/tds-mobile`
 - Data: CheapShark, PlayStation GraphQL, Xbox Store Edge, Nintendo KR Store
-- Ops: `prebuild` snapshots, `.ait` bundle
+- Ops: `prebuild` snapshots, `.ait` bundle, website on Vercel
 
 ## Close
 
-The lesson was not “call more APIs.” It was finishing a product **inside WebView limits, from the feed to the store**. The screens above are the shipped shape.
+The lesson was not “call more APIs.” It was finishing a product **inside WebView limits, from the feed to the store**. The screens above are the shipped shape; going beyond Toss came down to separating the platform-bound UI from data logic that runs anywhere.

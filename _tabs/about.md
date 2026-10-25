@@ -14,9 +14,10 @@ pair: /en/about/
 ## 대표 프로젝트
 
 ### 겜세일
-스팀·에픽·콘솔 할인 게임을 한눈에 보여주는 **앱인토스 미니앱**.  
-WebView CORS 제약을 빌드 타임 스냅샷으로 풀고, 광고·프로모션·콘텐츠 필터까지 실서비스 수준으로 연동했습니다.
+스팀·에픽·콘솔 할인 게임을 한눈에 보여주는 **앱인토스 미니앱**이자 **할인 게임 검색 웹사이트**.  
+WebView CORS 제약을 빌드 타임 스냅샷으로 풀고, 광고·프로모션·콘텐츠 필터까지 실서비스 수준으로 연동했습니다. TDS가 토스 밖 도메인을 막아 데이터 로직만 공유하고 웹 UI를 분리해 검색·역대 최저가 비교 사이트로 확장했습니다.
 
+- [웹사이트](https://gamsale.vercel.app)
 - [GitHub](https://github.com/jin3402/gamsale)
 - [개발 기록](/posts/gamsale/)
 
@@ -47,4 +48,4 @@ FastAPI · React · RAG · Railway 배포까지 한 흐름으로 통합했습니
 - **Frontend:** TypeScript, React, Flutter, Vite, TDS
 - **Backend / AI:** Python, FastAPI, MySQL, Redis, RAG, OpenAI
 - **macOS Native:** Swift, AppKit, Accessibility API
-- **Platform:** Apps in Toss (WebView), GitHub Pages, Railway
+- **Platform:** Apps in Toss (WebView), Vercel, GitHub Pages, Railway
