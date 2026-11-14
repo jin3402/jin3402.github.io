@@ -80,6 +80,17 @@ _The real next step after picking a recommendation. The interstitial runs only b
 | Interstitial on search | Broke the compute UX | Move the ad to map-exit |
 | Kakao 45-result cap | API page limit | Widen radius in steps and de-dupe |
 
+## Why not the more accurate formula
+
+The spherical midpoint accounts for the curve of the earth and is more accurate, but it handles only two points. The app takes 2 to 6 origins. So I implemented both and measured the gap on real coordinates.
+
+| Route | Distance | Gap between the two methods |
+|---|---:|---:|
+| Gangnam Station – Hongik Univ. Station | 11.2km | about 2.2m |
+| Seoul – Busan | 325km | about 1.5km |
+
+For meeting spots inside the Seoul area the gap does not matter, so I chose the arithmetic mean, which supports any number of points. The spherical version stays in `geo.ts` with this reasoning. If the service goes nationwide, it should replace the mean.
+
 ## Stack
 
 - React, TypeScript, Vite

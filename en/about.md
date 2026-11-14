@@ -33,7 +33,7 @@ A Flutter team project that recommends destinations after a 7-step preference te
 - [Write-up](/en/posts/ai-travel/)
 
 ### Havruta AI Tutor
-A Havruta-style learning web app where high-school students explain ideas to an AI and get follow-up questions. FastAPI, React, RAG, and a Railway deploy are wired as one flow.
+A Havruta-style learning web app where high-school students explain ideas to an AI and get follow-up questions. FastAPI, React, RAG, and a Railway deploy are wired as one flow. Production serves 302,059 retrieval documents across 9 subjects, and 196 automated tests pass. A search improvement did not reproduce in comparison experiments, so it was not shipped; the write-up records how that was decided.
 
 - [GitHub](https://github.com/20211400jiho/havruta-ai-tutor)
 - [Public demo](https://frontend-production-8c41.up.railway.app)

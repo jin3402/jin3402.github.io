@@ -37,7 +37,7 @@ WebView CORS 제약을 빌드 타임 스냅샷으로 풀고, 광고·프로모�
 
 ### Havruta AI Tutor
 고등학생이 AI와 질문·설명·피드백을 반복하는 **하브루타 학습 웹앱**.  
-FastAPI · React · RAG · Railway 배포까지 한 흐름으로 통합했습니다.
+FastAPI · React · RAG · Railway 배포까지 한 흐름으로 통합했습니다. 운영 서버에는 9개 과목 302,059건의 검색 자료가 올라가 있고, 자동 테스트 196개가 통과합니다. 검색 개선안은 비교 실험에서 효과가 재현되지 않아 운영에 올리지 않았고, 그 과정을 개발 기록에 남겼습니다.
 
 - [GitHub](https://github.com/20211400jiho/havruta-ai-tutor)
 - [공개 테스트](https://frontend-production-8c41.up.railway.app)
@@ -46,6 +46,6 @@ FastAPI · React · RAG · Railway 배포까지 한 흐름으로 통합했습니
 ## 기술 스택
 
 - **Frontend:** TypeScript, React, Flutter, Vite, TDS
-- **Backend / AI:** Python, FastAPI, MySQL, Redis, RAG, OpenAI
+- **Backend / AI:** Python, FastAPI, MySQL, Redis, RAG(ChromaDB, BM25·RRF 재정렬), OpenAI
 - **macOS Native:** Swift, AppKit, Accessibility API
 - **Platform:** Apps in Toss (WebView), Vercel, GitHub Pages, Railway

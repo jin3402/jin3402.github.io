@@ -114,6 +114,21 @@ Nintendo titles are filtered for adult, sexual, and low-quality keywords at snap
 | TDS blocks non-Toss domains | Share the data layer; separate web entry, build, and UI |
 | Cost of all-time-low calls | Off the list; fetched once when a web detail opens |
 
+## What the numbers say
+
+There is no server, so I fixed the values I can control and pinned them with tests.
+
+| Item | Before | After | How |
+|---|---:|---:|---|
+| Web JS bundle | 1.41MB | 314KB (−78%) | Separate web build without TDS and the Toss SDK |
+| Mini-app package (.ait) | 6.18MB | 4.18MB (−32%) | Moved registration images the code never uses out of the bundle |
+| Free API calls | List and detail calls overlapped | 800ms between requests, 10-minute cache | A queue that sends one request at a time. On 429 it tells the user instead of retrying |
+| Console store lists | 0 in the WebView | 319 | Collected with Node right before the build and bundled |
+
+- 52 automated tests in 13 files pass. They check that the same request hits the network once, that only https links on store domains are allowed, that two simultaneous reward calls reach the API once, and that the snapshot holds no blocked titles.
+- The 319 console deals are 150 PlayStation, 139 Nintendo and 30 Xbox (snapshot of 2026-10-25).
+- Console lists are build-time data, not live. Return rate and store click-through are not measured yet.
+
 ## Stack
 
 - Language / UI: TypeScript, React 18, Vite
