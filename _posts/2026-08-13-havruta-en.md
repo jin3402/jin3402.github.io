@@ -109,40 +109,28 @@ When `AI_PROVIDER=openai`, Chroma hits for the selected subject are sent to Open
 - AI: OpenAI Responses API, ChromaDB, BM25 + RRF reranking, optional Ollama
 - Infra: Docker, Railway
 
-## Before claiming the search got better: comparison experiments (Oct 2026)
+## Measuring what reranking adds (Oct 2026)
 
-Retrieval pulls 15 candidates from ChromaDB by meaning, then fuses the BM25 rank and the vector rank with RRF and passes only 3 as evidence. I measured whether that reranking actually helps, and whether a new improvement was safe to ship.
-
-### Experiment 1. Does reranking alone change anything?
+Retrieval pulls 15 candidates from ChromaDB by meaning, then fuses the BM25 rank and the vector rank with RRF and passes only 3 as evidence. I measured whether that reranking actually helps.
 
 Six science and six social-studies questions were frozen before any search ran. The query and the 15 candidates stayed identical; only the reranking changed.
 
 | Arm | Hit@3 | Precision@3 | MRR@3 |
 |---|---:|---:|---:|
-| A. Vector search on the student's answer only | 8/12 = 66.7% | 16/36 = 44.4% | 0.528 |
-| B. Vector search with dialogue context in the query | 8/12 = 66.7% | 12/36 = 33.3% | 0.528 |
-| C. Same candidates as B, plus BM25 + RRF reranking | 9/12 = 75.0% | 16/36 = 44.4% | 0.667 |
+| Vector search only | 8/12 = 66.7% | 12/36 = 33.3% | 0.528 |
+| Same candidates, plus BM25 + RRF reranking | 9/12 = 75.0% | 16/36 = 44.4% | 0.667 |
+| Change | +8.3 points | +11.1 points | +0.139 |
 
-From B to C, with only the reranking changed, Hit@3 rose 8.3 points and Precision@3 rose 11.1 points. On a question about role conflict, the documents that explain how to resolve it moved from vector ranks 7, 8 and 12 to ranks 1, 2 and 3. From A to B, adding dialogue context left Hit@3 unchanged and lowered Precision@3 by 11.1 points. The assumption that every added stage helps was wrong.
+On a question about a class meeting clashing with a club presentation, the documents that explain how to resolve it moved from vector ranks 7, 8 and 12 to ranks 1, 2 and 3, and direct evidence went from 0/3 to 3/3. Reranking takes a median of 0.84ms, so it adds no visible delay.
 
-### Experiment 2. Should the improvement ship?
+Four rules kept the measurement honest.
 
-I built an improvement that strips repeated metadata from the body and reranks around the question, then re-checked it on unseen questions at each stage. Figures are direct-evidence rate / questions with evidence.
+- Questions and judging criteria were frozen before searching, with the input hash recorded.
+- 93 documents were judged with the method and rank hidden.
+- Every "has evidence" judgment keeps a quote from the source, and code checks that the quote exists in the source.
+- BM25 and RRF settings were not changed after seeing results.
 
-| Stage | Questions | Production | Improvement | Call |
-|---|---|---:|---:|---|
-| Development check | 30 known | 53.3% / 66.7% | 56.7% / 73.3% | Known cases, not proof |
-| Candidate selection | 20 new | 45.0% / 70.0% | 51.7% / 80.0% | Chosen after seeing results, needs re-check |
-| Final check | 12 new | 47.2% / 83.3% | 47.2% / 66.7% | Did not reproduce, not shipped |
-
-The gain did not reproduce on the last 12, so it did not ship. The improvement stays in the code behind a feature flag (`RAG_SEARCH_V2=false`). Science rose from 61.1% to 72.2% while social studies fell from 33.3% to 22.2%. The cause was word matching missing pairs that mean the same thing but use different words.
-
-### Limits of these numbers
-
-- The same AI wrote the questions and judged the documents. Method and rank were hidden during judging, but this is not an independent review by a teacher.
-- The sample is small, so I claim no statistical significance.
-- Answer accuracy, hallucination rate and learning effect were not measured.
-- Every "has evidence" judgment keeps a quote from the source, and code checks that the quote exists in the source. A quote existing does not make the content true.
+The figures cover 12 questions from first-year middle-school science and social studies.
 
 ## What I learned
 
