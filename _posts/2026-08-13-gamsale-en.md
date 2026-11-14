@@ -19,7 +19,7 @@ description: A Toss WebView mini-app that shows Steam, Epic, and console game de
 - **GitHub:** [jin3402/gamsale](https://github.com/jin3402/gamsale)
 - **Platform:** Apps in Toss WebView · TDS / Website: Vercel
 - **Role:** Solo — product, engineering, and launch
-- **Users:** 300+ to date
+- **Users:** 400+ to date
 
 Game discounts live on Steam, Epic, Xbox, PlayStation, and Nintendo. Putting them in one place is useful, but console store APIs often fail CORS inside the Toss WebView. TDS, ads, promotion review, and adult-content rules all have to be met. A plain `fetch` is not enough to ship.
 
