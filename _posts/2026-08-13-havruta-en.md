@@ -15,8 +15,6 @@ description: A Havruta tutor MVP where students explain ideas to an AI. Branch m
 This is not a service that only hands answers to high-school students. It is a Havruta web app where they **explain in their own words and get feedback**.
 
 - **GitHub:** [20211400jiho/havruta-ai-tutor](https://github.com/20211400jiho/havruta-ai-tutor)
-- **Web app:** [public demo](https://frontend-production-8c41.up.railway.app)
-- **API / Swagger:** [docs](https://backend-production-98f3.up.railway.app/docs)
 - **Role:** Team — backend, AI, branch integration, deploy
 
 ## Learning loop

@@ -48,7 +48,6 @@ WebView CORS 제약을 빌드 타임 스냅샷으로 풀고, 광고·프로모�
 FastAPI · React · RAG · Railway 배포까지 한 흐름으로 통합했습니다. 운영 서버에는 9개 과목 302,059건의 검색 자료가 올라가 있고, 자동 테스트 196개가 통과합니다. 검색 재정렬을 더했을 때 근거 확보율이 66.7%에서 75.0%로 오른 것을 비교 실험으로 확인했습니다.
 
 - [GitHub](https://github.com/20211400jiho/havruta-ai-tutor)
-- [공개 테스트](https://frontend-production-8c41.up.railway.app)
 - [개발 기록](/posts/havruta-ai-tutor/)
 
 ## 기술 스택

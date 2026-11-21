@@ -15,8 +15,6 @@ description: 고등학생이 AI와 질문·설명·피드백을 반복하는 하
 고등학생이 AI에게 답을 받기만 하는 서비스가 아니라, **자기 언어로 설명하고 피드백을 받는** 하브루타 학습 웹앱입니다.
 
 - **GitHub:** [20211400jiho/havruta-ai-tutor](https://github.com/20211400jiho/havruta-ai-tutor)
-- **웹앱:** [공개 테스트](https://frontend-production-8c41.up.railway.app)
-- **API / Swagger:** [docs](https://backend-production-98f3.up.railway.app/docs)
 - **역할:** 팀 프로젝트 / 백엔드·AI·브랜치 통합·배포
 
 ## 학습 흐름

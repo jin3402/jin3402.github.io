@@ -43,7 +43,6 @@ A Flutter team project that recommends destinations after a 7-step preference te
 A Havruta-style learning web app where high-school students explain ideas to an AI and get follow-up questions. FastAPI, React, RAG, and a Railway deploy are wired as one flow. Production serves 302,059 retrieval documents across 9 subjects, and 196 automated tests pass. A comparison experiment showed reranking lifting the evidence hit rate from 66.7% to 75.0%.
 
 - [GitHub](https://github.com/20211400jiho/havruta-ai-tutor)
-- [Public demo](https://frontend-production-8c41.up.railway.app)
 - [Write-up](/en/posts/havruta-ai-tutor/)
 
 ## Stack
