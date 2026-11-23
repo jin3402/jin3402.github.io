@@ -2,7 +2,7 @@
 layout: post
 title: "겜세일: curating console and PC deals inside a Toss mini-app — and on the web"
 date: 2026-08-19 09:00:00 +0900
-last_modified_at: 2026-10-26 09:00:00 +0900
+last_modified_at: 2026-11-23 09:00:00 +0900
 permalink: /en/posts/gamsale/
 slug: gamsale
 categories: [Project, Frontend]
@@ -20,6 +20,7 @@ description: A Toss WebView mini-app that shows Steam, Epic, and console game de
 - **Platform:** Apps in Toss WebView · TDS / Website: Vercel
 - **Role:** Solo — product, engineering, and launch
 - **Users:** 400+ to date
+- **Ranking:** **#31** in the Apps in Toss shopping category (Nov 2026)
 
 Game discounts live on Steam, Epic, Xbox, PlayStation, and Nintendo. Putting them in one place is useful, but console store APIs often fail CORS inside the Toss WebView. TDS, ads, promotion review, and adult-content rules all have to be met. A plain `fetch` is not enough to ship.
 
@@ -124,6 +125,11 @@ There is no server, so I fixed the values I can control and pinned them with tes
 | Mini-app package (.ait) | 6.18MB | 4.18MB (−32%) | Moved registration images the code never uses out of the bundle |
 | Free API calls | List and detail calls overlapped | 800ms between requests, 10-minute cache | A queue that sends one request at a time. On 429 it tells the user instead of retrying |
 | Console store lists | 0 in the WebView | 319 | Collected with Node right before the build and bundled |
+
+![Apps in Toss shopping ranking. #30 오늘도착택배, #31 겜세일, #32 다있어](/assets/img/posts/gamsale-rank-shopping-31.png)
+{: .w-75 .shadow .rounded-10 }
+_#31 in the Apps in Toss shopping category (Nov 2026)_
+{: .fig-caption }
 
 - 52 automated tests in 13 files pass. They check that the same request hits the network once, that only https links on store domains are allowed, that two simultaneous reward calls reach the API once, and that the snapshot holds no blocked titles.
 - The 319 console deals are 150 PlayStation, 139 Nintendo and 30 Xbox (snapshot of 2026-10-25).

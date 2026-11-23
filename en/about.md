@@ -30,6 +30,8 @@ A Havruta-style learning web app where high-school students explain ideas to an 
 ### 겜세일
 A Toss mini-app — and now a deal-search website — that puts Steam, Epic, and console game deals in one feed. Build-time snapshots absorb WebView CORS limits; ads, promotions, and content filters are wired for a real review. Because TDS blocks non-Toss domains, the website shares only the data layer and has its own UI with search and all-time-low comparison.
 
+Reached **#31** in the Apps in Toss shopping category (Nov 2026).
+
 - [Website](https://gamsale.vercel.app)
 - [GitHub](https://github.com/jin3402/gamsale)
 - [Write-up](/en/posts/gamsale/)
