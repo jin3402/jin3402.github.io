@@ -6,7 +6,6 @@ permalink: /posts/screenswap/
 slug: screenswap
 categories: [Project, macOS]
 tags: [swift, appkit, macos, accessibility, window-manager]
-pin: true
 locale: ko
 pair: /en/posts/screenswap/
 description: 맥북과 외부 모니터 사이에서 창을 키보드로 옮기고 정리하는 macOS 메뉴바 앱. 겹친 창을 실제로 펼치고, 여러 개를 골라 한 번에 옮기고, 되돌리기까지 되는 구조를 정리합니다.

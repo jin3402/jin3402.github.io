@@ -15,11 +15,19 @@ pair: /en/about/
 
 ### AX인재전쟁 × 삼일PwC: INF-001 전속계약·기안 승인 운영
 가상 화장품 그룹의 데이터로 1주일 동안 혼자 만든 **AI 업무 운영 앱**.  
-7/17까지 통보하지 않으면 28억 계약이 자동 갱신되는 상황에서, 서버가 현금을 다시 계산해 결재자를 정하고, CEO가 계약 3안 중 하나를 골라야 승인되게 만들었습니다. AI는 근거와 조건을 제안만 하고, 서버가 원본과 대조해 통과한 것만 씁니다. 자동 테스트 134개가 통과합니다.
+7/17까지 통보하지 않으면 28억 계약이 자동 갱신되는 상황에서, 서버가 현금을 다시 계산해 결재자를 정하고, CEO가 계약 3안 중 하나를 골라야 승인되게 만들었습니다. AI는 근거와 조건을 제안만 하고, 서버가 원본과 대조해 통과한 것만 씁니다. 자동 테스트 134개가 통과합니다. 대회에서 **상위 5%**에 들었습니다.
 
 - [배포 앱](https://aurora-campaign-approval-34ng.axhub.app)
 - [GitHub](https://github.com/jin3402/aurora-campaign-approval)
 - [개발 기록](/posts/samilpwc-campaign-approval/)
+- [상위 5% 인증서](https://axacademy.ai/axwar/cert/kbHt7cBPUn3l5OlJEOZvkebT)
+
+### Havruta AI Tutor
+고등학생이 AI와 질문·설명·피드백을 반복하는 **하브루타 학습 웹앱**.  
+FastAPI · React · RAG · Railway 배포까지 한 흐름으로 통합했습니다. 운영 서버에는 9개 과목 302,059건의 검색 자료가 올라가 있고, 자동 테스트 196개가 통과합니다. 검색 재정렬을 더했을 때 근거 확보율이 66.7%에서 75.0%로 오른 것을 비교 실험으로 확인했습니다.
+
+- [GitHub](https://github.com/20211400jiho/havruta-ai-tutor)
+- [개발 기록](/posts/havruta-ai-tutor/)
 
 ### 겜세일
 스팀·에픽·콘솔 할인 게임을 한눈에 보여주는 **앱인토스 미니앱**이자 **할인 게임 검색 웹사이트**.  
@@ -42,13 +50,6 @@ WebView CORS 제약을 빌드 타임 스냅샷으로 풀고, 광고·프로모�
 
 - [GitHub](https://github.com/jin3402/ai_travel)
 - [개발 기록](/posts/ai-travel/)
-
-### Havruta AI Tutor
-고등학생이 AI와 질문·설명·피드백을 반복하는 **하브루타 학습 웹앱**.  
-FastAPI · React · RAG · Railway 배포까지 한 흐름으로 통합했습니다. 운영 서버에는 9개 과목 302,059건의 검색 자료가 올라가 있고, 자동 테스트 196개가 통과합니다. 검색 재정렬을 더했을 때 근거 확보율이 66.7%에서 75.0%로 오른 것을 비교 실험으로 확인했습니다.
-
-- [GitHub](https://github.com/20211400jiho/havruta-ai-tutor)
-- [개발 기록](/posts/havruta-ai-tutor/)
 
 ## 기술 스택
 
